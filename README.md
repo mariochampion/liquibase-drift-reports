@@ -3,14 +3,13 @@
 
 
 ## Purpose & Goal
-RoboFlow was created to get a better sense for TensorFlow's image classifier by making it easier to gather 1000s of similar images by hashtag (such as "#robot" or "#robotart") to serve as re/training examples, and to enable easy testing of different TensorFlow hyperparameter settings for creating classifiers. specifically, tagged images are downloaded (your choice of Imgur API or from web.stagram.com) and then sorted into labeled sub-directories, according to a 'confidencemin' variable, which are periodically 'harvested' to retrain TensorFlow to create new classifiers.<br>
-<b>Issues, Contributions, and Pull Requests welcomed!</b>
+(TBD)
 
 
 
 
 ## Getting Started
-These instructions will get you a copy of the roboflow project up and running on your local machine for development and testing purposes.
+(TBD)
 
 
 ### Prerequisites
@@ -60,7 +59,7 @@ python drift_reports.py
 #### As a shortcut, add an alias in your .bash_profile to launch it via alias 'drift_report':
 ```
 nano ~/.bash_profile
-alias roboflow="cd path/to/install/dir/;python drift_report.py"
+alias drift_reports="cd path/to/install/dir/;python drift_report.py"
 ```
 
 
