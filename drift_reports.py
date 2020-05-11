@@ -78,7 +78,7 @@ def builddriftreports(localfile):
 
 
         #### now for to be doing the real works
-        #subprocess.call(diffcmd, shell=True)
+        subprocess.call(diffcmd, shell=True)
 
    
   return
