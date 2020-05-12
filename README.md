@@ -3,13 +3,13 @@
 
 
 ## Purpose & Goal
-Liquibase Pro can help you automate drift detection at scale in your database schemas with a new structured and machine readable diff output as json. This additional capability is an Pro extension to the existing community command "diff", and is invoked with a new --format option
+Liquibase Pro can help you automate drift detection at scale in your database schemas with a new structured and machine readable diff output as json. This additional capability is an Pro extension to the existing community command "diff", and is invoked with a new --format option.  
 `$> liquibase diff --format=json`
 
-This outputs a JSON structured object listing the differences between two databases (as configured in your liquibase.properties or Maven POM file under the "url" and "referenceUrl" keys.) By default, the result is output to STDOUT, which provides you with maximum flexibility to pipe the result into other tools or a processing pipeline. You can also have the output delivered to a file, using the `"--outputFile=<filename>"` global parameter, as in
+This outputs a JSON structured object listing the differences between two databases (as configured in your liquibase.properties or Maven POM file under the "url" and "referenceUrl" keys.) By default, the result is output to STDOUT, which provides you with maximum flexibility to pipe the result into other tools or a processing pipeline. You can also have the output delivered to a file, using the `"--outputFile=<filename>"` global parameter, as in  
 `$> liquibase --outputFile=myfile.json diff --format=json `
 
- Whether you choose STDOUT or a collection of files, you can then process this data to generate reports, to trigger actions, from alerts to diffChangeLogs, to updates, or whatever make sense for how you use Liquibase.
+Whether you choose STDOUT or a collection of files, you can then process this data to generate reports, to trigger actions, from alerts to diffChangeLogs, to updates, or whatever make sense for how you use Liquibase.
 
 
 
