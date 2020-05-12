@@ -15,8 +15,35 @@ Whether you choose STDOUT or a collection of files, you can then process this da
 
 
 ## Getting Started
-(TBD)
+1. cd to your Liquibase project, which is typically the dir where you have your liquibase.properties file and   
+`git clone https://github.com/mariochampion/liquibase-drift-reports.git`
 
+2. In my setup, I have kept some values in liquibase.properties, including username, password, referenceUsername, and referencePassword.
+
+
+Your directories should look like this:
+```
+├── my_liquibase_project
+|  ├── sql
+|  |  ├── liquibase.properties
+|  |  ├── my_sql_changelog.mysql.sql
+|  |  ├── drift_dblist.txt
+|  |  ├── drift_reports_conf.py
+|  |  ├── drift_reports.py
+|  |  ├── drift_reports (a generated directory on first run)
+|  |  |  ├── <timestamp-dir> (a generated directory on every run)
+|  |  |  |  ├── drift-refdb-db01-to-db02.json
+|  |  |  |  ├── drift-refdb-db01-to-db05.json
+|  |  |  |  ├── <and so on>
+
+```
+
+
+3. Configure `drift_reports_conf.py` for your usage. Pay most attention to where you store your 
+* reference database
+* list of target databases
+
+4. Enjoy!
 
 ### Prerequisites
 
