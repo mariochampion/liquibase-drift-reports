@@ -62,15 +62,8 @@ Your directories should look like this:
 ## Installing
 
 ```
-git clone https://github.com/mariochampion/roboflow
+git clone https://github.com/mariochampion/liquibase-drift-reports.git
 ```
-
-
-Your directories should look like this:
-```
-(TBD)
-```
-
 
 Et voila, you are ready to explore!
 
