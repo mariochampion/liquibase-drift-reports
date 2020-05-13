@@ -39,9 +39,9 @@ Your directories should look like this:
 ```
 
 
-3. Configure `drift_reports_conf.py` for your usage. Pay most attention to where you store your 
-* reference database
-* list of target databases
+3. Configure `drift_reports_conf.py` for your usage by first removing the '.sample' from yeh file name. Pay most attention to where you store your 
+* reference database values
+* list of target databases. In the sample this is 'drift_dblist.txt' but this file can be anywhere and generated in many ways. (An exercise left to the reader!)
 
 4. Enjoy!
 
@@ -109,5 +109,7 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE.md](LIC
 * StackExchange
 * Python
 
-## thanks and always remember: this robot loves you. 
-## boop boop!
+
+
+thanks and always remember: this robot loves you. 
+boop boop!
