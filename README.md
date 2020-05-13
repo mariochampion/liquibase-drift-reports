@@ -3,13 +3,16 @@
 
 
 ## Purpose & Goal
-Liquibase Pro can help you automate drift detection at scale in your database schemas with a new structured and machine readable diff output as json. This additional capability is an Pro extension to the existing community command "diff", and is invoked with a new --format option.  
-`$> liquibase diff --format=json`
+Liquibase Pro can help you automate drift detection at scale in your database schemas with a new structured and machine readable diff output as 1json1. This additional capability is an Pro extension to the existing community command "diff", and is invoked with a new --format option.
 
-This outputs a JSON structured object listing the differences between two databases (as configured in your liquibase.properties or Maven POM file under the "url" and "referenceUrl" keys.) By default, the result is output to STDOUT, which provides you with maximum flexibility to pipe the result into other tools or a processing pipeline. You can also have the output delivered to a file, using the `"--outputFile=<filename>"` global parameter, as in  
+```bash
+$> liquibase diff --format=json
+```
+
+This outputs a `JSON` structured object listing the differences between two databases (as configured in your `liquibase.properties` or Maven POM file under the `url` and `referenceUrl` keys.) By default, the result is output to `STDOUT`, which provides you with maximum flexibility to pipe the result into other tools or a processing pipeline. You can also have the output delivered to a file, using the `"-outputFile=<filename>` global parameter, as in  
 `$> liquibase --outputFile=myfile.json diff --format=json `
 
-Whether you choose STDOUT or a collection of files, you can then process this data to generate reports, to trigger actions, from alerts to diffChangeLogs, to updates, or whatever make sense for how you use Liquibase.
+Whether you choose `STDOUT` or a collection of files, you can then process this data to generate reports, to trigger actions, from alerts to diffChangeLogs, to updates, or whatever make sense for how you use Liquibase.
 
 
 
@@ -18,7 +21,7 @@ Whether you choose STDOUT or a collection of files, you can then process this da
 1. cd to your Liquibase project, which is typically the dir where you have your liquibase.properties file and   
 `git clone https://github.com/mariochampion/liquibase-drift-reports.git`
 
-2. In my setup, I have kept some values in liquibase.properties, including username, password, referenceUsername, and referencePassword.
+2. In my setup, I have kept some values in `liquibase.properties`, including `username`, `password`, `referenceUsername`, and `referencePassword`.
 
 
 Your directories should look like this:
@@ -39,7 +42,7 @@ Your directories should look like this:
 ```
 
 
-3. Configure `drift_reports_conf.py` for your usage by first removing the '.sample' from yeh file name. Pay most attention to where you store your 
+3. Configure `drift_reports_conf.py` for your usage by first removing the `.sample` from the file name. Pay most attention to where you store your 
 * reference database values
 * list of target databases. In the sample this is 'drift_dblist.txt' but this file can be anywhere and generated in many ways. (An exercise left to the reader!)
 
@@ -47,13 +50,14 @@ Your directories should look like this:
 
 ### Prerequisites
 
-#### software
-* Liquibase (<a href="http://liquibase.com/">http://liquibase.com/</a>) 
-* Python3 (<a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>)
+#### Software
+* [Liquibase](http://liquibase.com/) 
+* A project using `Liquibase`
+* [Python3](https://www.python.org/downloads/)
 * Terminal/Command Line familiarity
 
 
-#### permissions
+#### Permissions
 * Internet Access
 * File and directory creation permissions
 * Optional: Create aliases in ~/.bash_profile (or equivalent)
@@ -61,28 +65,30 @@ Your directories should look like this:
 
 ## Installing
 
-```
+```bash
 git clone https://github.com/mariochampion/liquibase-drift-reports.git
 ```
 
 Et voila, you are ready to explore!
 
 ## Usage:
-```
+```bash
 python drift_reports.py
 ```
 #### As a shortcut, add an alias in your .bash_profile to launch it via alias 'drift_reports' at the command line:
-```
+```bash
 nano ~/.bash_profile
 ```
 
 Then add this line to your bash_profile and save
-```
+```bash
 alias drift_reports="cd path/to/install/dir/;python drift_report.py"
 ```
 
 Then you can launch it with 
-```$> drift_reports```
+```bash
+$> drift_reports
+```
 
 
 
