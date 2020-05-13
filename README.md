@@ -67,7 +67,7 @@ git clone https://github.com/mariochampion/liquibase-drift-reports.git
 
 Et voila, you are ready to explore!
 
-## Guided usage:
+## Usage:
 ```
 python drift_reports.py
 ```
