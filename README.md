@@ -48,7 +48,7 @@ Your directories should look like this:
 ### Prerequisites
 
 #### software
-* Liquibase (<a href="https://liquibase.com/">https://liquibase.com/</a>) 
+* Liquibase (<a href="http://liquibase.com/">http://liquibase.com/</a>) 
 * Python3 (<a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>)
 * Terminal/Command Line familiarity
 
