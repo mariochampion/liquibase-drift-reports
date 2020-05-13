@@ -74,8 +74,16 @@ python drift_reports.py
 #### As a shortcut, add an alias in your .bash_profile to launch it via alias 'drift_reports' at the command line:
 ```
 nano ~/.bash_profile
+```
+
+Then add this line to your bash_profile and save
+```
 alias drift_reports="cd path/to/install/dir/;python drift_report.py"
 ```
+
+Then you can launch it with 
+```$> drift_reports```
+
 
 
 ## Contributing
